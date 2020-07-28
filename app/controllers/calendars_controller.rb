@@ -8,7 +8,6 @@ class CalendarsController < ApplicationController
 
   # 予定の保存
   def create
-    binding.pry
     Plan.create(plan_params)
     redirect_to action: :index
   end
@@ -42,6 +41,5 @@ class CalendarsController < ApplicationController
       }
       @week_days.push(days)
     end
-
   end
 end
